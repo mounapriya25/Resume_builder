@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                
+                background-color: black;
+                color: aliceblue;
+            }
+            .but{
+                width:60px;
+                height: 60px;
+                border: 1px solid rgb(247, 243, 243);
+                color:antiquewhite;
+                border-radius: 100px;
+                background-color: rgb(72, 70, 70);
+                font-weight:bolder;
+                font-size: larger;
+                padding: 20px ;
+                margin: 5px;
+            }
+            .float{
+                float: left;
+            }
+            .overflow{
+                overflow: hidden;
+            }
+            .sym{
+                background-color: rgb(231, 160, 9);
+            }
+            p{
+               
+                font-size: 50px;
+                text-indent: 200px;
+                font-style: normal;
+
+            }
+            .c{
+                padding: 20px 2px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <p class="js-cal">0</p>
+        <div class="overflow">
+            <button class="but float" onclick="youpick('1')">1</button>
+            <button class="but float" onclick="youpick('2')">2</button>
+            <button class="but float" onclick="youpick('3')">3</button>
+            <button class="but float sym" onclick="youpick('+')">+</button>
+        </div>
+        <div class="overflow">
+            <button class="but float" onclick="youpick('4')">4</button>
+            <button class="but float" onclick="youpick('5')">5</button>
+            <button class="but float" onclick="youpick('6')">6</button>
+            <button class="but float sym" onclick="youpick('-')">-</button>
+        </div>
+        <div class="overflow">
+            <button class="but float" onclick="youpick('7')">7</button>
+            <button class="but float" onclick="youpick('8')">8</button>
+            <button class="but float" onclick="youpick('9')">9</button>
+            <button class="but float sym" onclick="youpick('*')">*</button>
+        </div>
+        <div class="overflow">
+            <button class="but float" onclick="youpick('0')">0</button>
+            <button class="but float" onclick="youpick('.')">.</button>
+            <button class="but float" onclick="youpick('=')">=</button>
+            <button class="but float sym" onclick="youpick('/')">/</button>
+        </div>
+        <button class="but float c" onmouseover="c()">clear</button>
+        <script>
+            let num='';
+            function youpick(n) {
+                if(n==='='){
+                    num=eval(num)
+                }
+                else{
+                    num=num+n;
+                }
+                document.querySelector('.js-cal').innerHTML=`${num}`;
+            }
+
+            function c(n){
+                num='';
+                document.querySelector('.js-cal').innerHTML=`0`;
+                console.log(num,'hi')
+            }
+            console.log(num,'hi')
+        </script>
+
+
+    </body>
+</html>

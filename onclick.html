@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <button  class="js-button1">click</button>
+        <button  class="js-button2">click</button>
+
+        <script>
+            const button = document.querySelector('.js-button1')
+            button.addEventListener('click' ,() => {// here click is a keyword
+                alert('after clicking')
+                console.log("hi");
+            });
+            let a=1
+            let b=2
+            document.querySelector('.js-button2').addEventListener('click' ,(a,b) => {// here click is a keyword
+               console.log()
+            });
+        </script>
+    </body>
+</html>

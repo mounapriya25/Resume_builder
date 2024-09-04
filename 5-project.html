@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .sub{
+                border: 2px solid black ;
+                border-radius: 20px;
+                margin-bottom: 20px;
+            }
+            .sub:hover{
+                background-color: black;
+                color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  onmouseenter=hovering over,
+          onmouseleave=stop hovering over
+          these are event listers
+        -->
+        <button class="sub" onclick="subscribe()">subscribe</button>
+      
+        <br> <input  placeholder="cost of order" class="js" onkeydown="console.log('onkeydown is used')">
+        <button  onmouseenter ="cal()">calculate</button>
+        <p id="ph">if amount is less than 50 then tax=10
+            <br>if amount is greater than 0 tax
+        </p>
+        <br> <input  placeholder="cost of order" class="j2" onkeydown="console.log(event);
+        if(event.code==='Space')
+        {
+           cal2();
+        }">
+        <button  >calculate</button>
+        <p id="j"></p>
+  
+    <script>
+
+        function subscribe(){
+            let c=document.querySelector('.sub');
+            if(c.innerText==='subscribe'){
+                c.innerText='subscribed';
+               
+            }
+            else{
+                c.innerText='subscribe';
+            }
+        }
+        
+        function cal(){
+            let  input1=document.querySelector('.js');
+            let n1=Number(input1.value)
+           
+            console.log(typeof n)
+           if(n1<50)
+           {
+              n1=n1+10;
+           }
+          
+           document.getElementById('ph').innerHTML=`Rs.${n1}`
+
+
+
+        }
+        function cal2(){
+            let  input2=document.querySelector('.j2');
+            let n2=Number(input2.value)
+            if(n2<50)
+           {
+               n2=n2+10;
+           }
+           document.getElementById('j').innerHTML=`Rs.${n2}`
+        }
+        
+    // document.getElementById('ph').innerHTML='changed'
+    </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>document ..... it replace the code in page </p>
+        <p id="js"></p>
+        <script>
+            //querySelector  it get html element from page and put it in js
+            console.log(document.querySelector('p'))//only value  shows before changing inner html
+            console.log(document.querySelector('p').innerHTML)//we can also change p by.innerHtml="some text"
+            
+            //get element by class
+            /*console.log(document.querySelector('.js'));
+            let e=document.querySelector('.js')
+            console.log(e.innerHTML)
+
+            document.body.innerHTML="hi!!!!"
+            document.title="DOM"
+            console.log( document.title)
+            console.log( document.body ,document.body.innerHTML)
+            document.body.innerHTML='<button>hello</button>'*/
+            document.getElementById('js').innerHTML="text can be changed by id";
+          
+        </script>
+    </body>
+</html>

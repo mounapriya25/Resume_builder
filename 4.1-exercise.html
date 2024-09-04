@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head><title>game</title></head>
+    <body>
+        <button onclick=" fnd(youpick,comptpick,sc); 
+        comptpick=fun();
+       
+        alert(`win:${sc.win} lose:${sc.lose}`),youpick='head';"
+        >head</button>
+        <button onclick=" comptpick=fun();
+       fnd(youpick,comptpick,sc);
+       alert(`win:${sc.win} lose:${sc.lose}`),youpick='tail';
+      
+       "
+       >tail</button>
+       
+       <p class="js-1"></p>
+       <p class="js-3"></p>
+       <p class="js-2">win:0 lose:0</p>
+      
+       
+      
+        <script>
+            let youpick='';
+            let comptpick='';
+            let result=''
+          
+            const sco={
+                 win:0,
+                 lose:0
+            };
+         localStorage.setItem('user',JSON.stringify(sco));
+         console.log(sco)
+         const sc = JSON.parse(localStorage.getItem('user'))
+
+         
+            function fun(){
+                let move=Math.random()
+                if(0<=move<1/2){  
+                    return 'head';
+                }
+                else{
+                    return'tail';
+                }
+            }
+
+        
+            function fnd(yp,cp,sc){
+                if(yp===cp){
+                   result='win';
+                 
+                    if(result==='win'){
+                        sc.win+=1;
+                       
+                    }
+                    else{
+                         sc.lose+=1;
+                    }
+                    document.querySelector('.js-1').innerHTML=`congrats!\n`;
+                    document.querySelector('.js-3').innerHTML=`(compter picks the ${cp} and you pick the ${yp})`;
+                }
+                else{
+                    result='lose';
+                 
+                   if(result==='win'){
+                        sc.win+=1;
+                    }
+                    else{
+                        sc.lose+=1;
+                    }
+                    document.querySelector('.js-1').innerHTML=`quit!`;
+                    document.querySelector('.js-3').innerHTML=`compterpicks the ${cp} and you pick the ${yp}`;
+                }
+                w(sc)
+                console.log(sc.win)
+            }
+            
+            console.log(sc.win)  
+
+             function w(){
+                document.querySelector('.js-2').innerHTML=` win:${sc.win} lose:${sc.lose}`;
+            }
+        
+        </script>
+    </body>
+</html>
