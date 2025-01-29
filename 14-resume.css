@@ -1,0 +1,226 @@
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+               
+               
+            }
+            *{
+                border-radius: 5px;
+               
+            }
+            .over{
+                overflow: hidden;
+                
+            }
+            .grid{
+                display: grid;
+                grid-template-columns: 20% 70% 10%;
+            }
+            .header{
+                height: 40px;
+                border-style: none none solid none;
+                border-color: rgb(237, 231, 231) ;
+            }
+            .mar{
+                margin: 2px 2px 2px 90%  ;
+            }
+            .bold{
+                font-weight: bold;
+                font-size: 150%;
+            }
+            .a{
+                margin-top: 10px;
+            }
+            .b1{
+                height: fit-content;
+                border-style:solid ;
+                border-color: rgb(237, 231, 231) ;
+                padding: 20px;
+                margin-bottom: 7px;
+            }
+
+
+            .main{
+                margin: 20px 10% ;
+            }
+            h6{
+                margin-top: 5%;
+                border: 2px solid rgb(44, 44, 44);
+                padding: 9px;
+                color: aliceblue;
+                background-color: rgb(30, 30, 31);
+            }
+            form{
+                font-size: small;
+                font-weight: bolder;
+               
+            }
+            input{
+                border:2px solid rgb(237, 231, 231) ;
+                font-size: smaller;
+                height: 20px;
+                width:90%;
+                padding: 2px 7px;
+                margin: 5px 0px 15px;
+            }
+            .for{
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+            }
+            button{
+                margin: 10px 0px;
+                color: white;
+                background-color: blue;
+            }
+            .inp{
+                width:90%;
+            }
+            
+           .gridtemp{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 45% 100%;
+            
+           }
+           .green{
+                background-color: rgb(1, 61, 65);
+                color:aliceblue;
+                margin-right: 10%;
+                padding: 20px;
+                border: 2px solid rgb(1, 61, 65);
+                margin-right: 0%;
+           }
+           .b2{
+               
+                line-height: 10px;
+                height: fit-content;
+                border-style:solid solid solid none ;
+                border-color: rgb(237, 231, 231) ;
+                padding: 20px;
+                box-shadow: 1px 1px 5px 0px rgb(215, 209, 209);
+           }
+           .nor{
+            font-size: 14px;
+            font-weight: 100;
+           }
+           .img{
+            mix-blend-mode:lighten;
+            border-radius: 50px;
+            margin-left: 23%;
+            margin-top: 20px;
+        }
+        .imp{
+            font-weight:bold;
+            font-size:16px;
+         }
+         
+        .date{
+            color:aliceblue;
+            background-color: rgb(1, 61, 65);
+            border-radius: 5px;
+            padding: 2px 5px;
+            font-size:10px;
+            
+        }
+        .line{
+            line-height: 7px;
+        }
+        .c{
+            background-color: rgb(233, 246, 246);
+        }
+        h4{
+            font-weight:bolder;
+            margin: 40px 0px 0px;
+        }
+        .skill{
+            
+            overflow-wrap: break-word;
+            line-height: 20px;
+        }
+        .remove{
+            position: relative;
+            left: 98%;
+            margin-top: 0%;
+            background-color: rgb(225, 7, 7);
+            border-radius: 10px;
+            width: 20px;
+            height: 19px;
+            border-color: rgb(243, 8, 8);
+            margin-bottom: 5px;
+            
+            
+        }
+        .resume{
+            display: flex;
+        }
+        .center{
+            text-align: center;
+        }
+            
+            @media screen and (max-width:900px){
+                
+                .mar{
+                margin: 2px 2px 2px 85%  ;
+                }
+                h6{
+                    padding: 5px;
+                    margin-bottom: 10px;
+                }
+              
+                .for{
+                    grid-template-columns: 48% 48%;
+                }
+                .green{
+                    overflow-wrap: break-word;
+                }
+                .gridtemp{
+                    grid-template-columns: 38% 87%;
+            
+           }
+           .img{
+            margin-left: 17%;
+           }
+           .remove{
+            position: relative;
+            left: 96%;
+            top:0px;
+            
+            margin: 0%;
+            
+        }
+               
+    }
+          
+        @media print{
+            @page{
+                size: Letter;
+                margin: 0% 19% 0% 3%;
+                height: fit-content;
+            }
+             body{
+                visibility: hidden;
+            }
+            #resume,#resume *{
+                visibility: visible;
+        
+    
+            }
+            #resume{
+                position: absolute;
+                top:0;
+                left:0;
+                margin:0 ;
+                
+                height: auto;
+                max-height :fit-content;
+              
+                padding: 0%;
+                box-sizing: border-box;
+
+            
+               
+            }
+            
+           
+        }
+       

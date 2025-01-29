@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" initial-scale="1">
+        <link rel="stylesheet" href="14-resume.css">
+    </head>
+        <body>
+
+            <div class="header over grid ">
+                <div >
+                    <img class="mar" src="https://cdn-icons-png.flaticon.com/512/8347/8347432.png" width="20" height="20">
+                    
+                </div>
+                <div class="bold">build<span style="color: rgb(8, 8, 231);">resume.</span></div>
+
+            </div>
+
+            <div class="main">
+               
+                <h6>ABOUT SECTION</h6>
+                <div class="b1 js-1">
+                    <form class="for" id="inputForm" >
+                            <div >
+                                
+                               <label for="n2">Your Image</label><br>
+                               <input type="file" id="n2" >
+                                <label for="n1">First name</label>
+                                <br><input id="n1" type="text" placeholder="eg: John" onchange="get(n1)">
+                                <br><label for="n3">Email</label>
+                                <br><input id="n3" type="email" placeholder="eg: John@gamail.com"  onblur="get(n3)">
+                            </div>
+                            <div>
+                                <label for="n4">Middle name(optional)</label>
+                                <br><input id="n4" type="text" placeholder="eg: herbert" onblur="get(n4)">
+                                <br><label for="n5">Designation</label>
+                                <br><input id="n5" type="text" placeholder="eg: sr.accountant" onblur="get(n5)">
+                                <br><label for="n6">Phone No:</label>
+                                <br><input id="n6" type="text" placeholder="eg: 1234567890" onblur="get(n6)">
+                            </div>
+                            <div>
+                                <label for="n7">Last name</label>
+                                <br><input id="n7" type="text" placeholder="eg: Doe" onblur="get(n7)">
+                                <br><label for="n8">Address</label>
+                                <br><input id="n8" type="text" placeholder="eg: Lake Street 23" onblur="get(n8)">
+                                <br><label for="n9">Summary</label>
+                                <br><input id="n9" type="text" onblur="get(n9)" >
+                            </div>   
+                    </form>
+                  
+                    
+                </div>
+
+                <button onclick="add('js-1')">+</button>
+                
+           
+                <h6>ACHIEVEMENTS</h6>
+                <div class="js-con1">
+                    <div class='b1 js-2 '>
+                        <button class="remove js-remove"  onclick="remove(this)" >-</button>
+                        <form class="for">
+                            
+                            <div>
+                                <label for="a1">Title</label>
+                                <br><input id="a1" type="text" onblur="get(a1)">  
+                            </div>
+                            <div>
+                                <label for="a2">Description</label>
+                                <br><input id="a2" type="text" onblur="get(a2)" >
+                            </div>
+                        </form>
+                    </div>        
+              
+           
+                <button onclick="add_ele('js-con1','js-2')">+</button>
+            </div>
+                <h6>EXPERIENCE</h6>
+                <div class="js-con2">
+                    <div class="b1 js-3 e">
+                        <button class="remove js-remove"  onclick="remove(this)" >-</button>
+                        <form class="for">
+                            <div >
+                                <label for="e1">Title</label>
+                                <br><input id="e1" type="text"onblur="get(e1)">
+                                <br><label for="e2">Start Date</label>
+                                <br><input id="e2" type="date" onblur="get(e2)">
+                            </div>
+                            <div>
+                                <label for="e3">Company / Organisation</label>
+                                <br><input id="e3" type="text" onblur="get(e3)">
+                                <br><label for="e4">End Date</label>
+                                <br><input id="e4" type="date" onblur="get(e4)">
+                            </div>
+                            <div>
+                                <label for="e5">Location</label>
+                                <br><input id="e5" type="text"onblur="get(e5)">
+                                <br><label for="e6">Description</label>
+                                <br><input id="e6" type="text" onblur="get(e6)">
+                            </div>   
+                        </form>
+                    </div>
+                </div>
+                <button onclick="add_ele('js-con2','js-3')">+</button>
+
+                <h6>EDUCATION</h6>
+                <div class="b1 js-4">
+                    <form class="for">
+                        <div >
+                            <label for="d1">School</label>
+                            <br><input id="d1" type="text" onblur="get(d1)">
+                            <br><label for="d2">Start Date</label>
+                            <br><input id="d2" type="date" onblur="get(d2)">
+                        </div>
+                        <div>
+                            <label for="d3">Degree</label>
+                            <br><input id="d3" type="text" onblur="get(d3)">
+                            <br><label for="d4">End Date</label>
+                            <br><input id="d4" type="date" onblur="get(d4)">
+                        </div>
+                        <div>
+                            <label for="d5">City</label>
+                            <br><input id="d5" type="text" onblur="get(d5)">
+                            <br><label for="d6">Description</label>
+                            <br><input id="d6" type="text" onblur="get(d6)">
+                        </div>   
+                    </form>
+                </div>
+                <button onclick="add('js-4')">+</button>
+
+                <h6>PROJECTS</h6>
+                <div class="js-con3 p">
+                    <div class="b1 js-5">
+                        <button class="remove js-remove"  onclick="remove(this)" >-</button>
+                        <form class="for">
+                            <div>
+                                <label for="p1">Project Name</label>
+                                <br><input id="p1" type="text"onblur="get(p1)" >  
+                            </div>
+                            <div>
+                                <label for="p2">Project Link</label>
+                                <br><input id="p2" type="text" onblur="get(p2)">  
+                            </div>
+                            <div>
+                                <label for="p3">Description</label>
+                                <br><input id="p3" type="text"onblur="get(p3)" >
+                            </div>  
+                        </form>
+                    </div>
+                </div>
+                <button onclick="add_ele('js-con3','js-5')">+</button>
+                
+                
+                <h6>SKILLS</h6>
+                
+                <div class="js-con4">
+                  
+                    <div class="b1 js-6">
+                        <button class="remove js-remove"  onclick="remove(this)" >-</button>
+                        <form >
+                            <div>
+                                <label for="s1">Skill</label>
+                                <br><input class="inp" id="s1" type="text" onblur="get(s1)">  
+                            </div>
+                        </form>
+                    </div> 
+                </div>
+            
+                    <button onclick="add_ele('js-con4','js-6')">+</button>
+                 
+             <div class=" resume js-res" id="resume"></div>
+            
+                <button onclick="reset()">reset</button>
+                <button onclick="pnt()">Print</button>
+               
+            
+            <script src="14-resume.js"></script>
+
+
+        </body>
+   
+</html>
